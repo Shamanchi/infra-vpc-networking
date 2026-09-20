@@ -1,0 +1,6 @@
+services:
+  plan:
+    build: .
+    env_file:
+      - .env
+    command: ["plan", "--cidr", "10.0.0.0/16", "--azs", "2", "--newbits", "8", "--out", "plan.json"]
